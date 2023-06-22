@@ -1,0 +1,172 @@
+h1 {
+  color: rgb(237, 75, 75);
+}
+
+.nav-link {
+  color: #ff6d60;
+}
+body {
+  background-color: #f8e8ee;
+}
+
+.container-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px 50px;
+  margin: 100px auto;
+  
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 70px 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: end;
+  gap: 25px;
+  padding: 0 70px 70px;
+}
+.footer img {
+  width: 60px;
+}
+
+/* @media (max-width: 768px) {
+
+  .container-card {
+    grid-template-columns: 1fr 1fr;
+  }
+} */
+.card{
+    background: white;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 6px;
+    padding: 10px 10px 60px;
+}
+
+
+    
+
+
+.card img {
+    background-color: rgb(236, 236, 236);
+    width: 320px;
+    border-radius: 6px 6px 0 0;
+  }
+
+.category {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: rgb(63, 121, 230);
+  padding: 10px 7px 0;
+  height: 75px;
+}
+
+.category:hover {
+  cursor: pointer;
+}
+
+.heading {
+  font-weight: 600;
+  color: rgb(88, 87, 87);
+  padding: 7px;
+}
+
+.heading:hover {
+  cursor: pointer;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.name:hover {
+  cursor: pointer;
+}
+
+/* ------------------------------------------------ */
+
+label {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 15px 10px 10px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  color: black;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label svg {
+  fill: hsl(0deg 100% 50%);
+  stroke: hsl(0deg 100% 50%);
+  animation: heartButton 1s;
+}
+
+@keyframes heartButton {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.3);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+input + label .action {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+}
+
+input + label .action span {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  transition: all 0.5s;
+}
+
+input + label .action span.option-1 {
+  transform: translate(0px, 0%);
+  opacity: 1;
+}
+
+input:checked + label .action span.option-1 {
+  transform: translate(0px, -100%);
+  opacity: 0;
+}
+
+input + label .action span.option-2 {
+  transform: translate(0px, 100%);
+  opacity: 0;
+}
+
+input:checked + label .action span.option-2 {
+  transform: translate(0px, 0%);
+  opacity: 1;
+}
+
+
